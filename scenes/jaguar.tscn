@@ -1,0 +1,86 @@
+[gd_scene load_steps=12 format=3 uid="uid://b7r1gvuetoy42"]
+
+[ext_resource type="Script" uid="uid://bd6txglfenec1" path="res://scripts/jaguar.gd" id="1_tyk5c"]
+[ext_resource type="Texture2D" uid="uid://d3lu0xso1bx1n" path="res://assets/images/jaguar/jaguar sprite.png" id="2_x2xh8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05kad"]
+atlas = ExtResource("2_x2xh8")
+region = Rect2(0, 0, 448, 448)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2qel"]
+atlas = ExtResource("2_x2xh8")
+region = Rect2(448, 0, 448, 448)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_spgb4"]
+atlas = ExtResource("2_x2xh8")
+region = Rect2(896, 0, 448, 448)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tlhb0"]
+atlas = ExtResource("2_x2xh8")
+region = Rect2(0, 448, 448, 448)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ff5i2"]
+atlas = ExtResource("2_x2xh8")
+region = Rect2(896, 448, 448, 448)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1hdnr"]
+atlas = ExtResource("2_x2xh8")
+region = Rect2(0, 896, 448, 448)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lxwe0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_05kad")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2qel")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_spgb4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tlhb0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ff5i2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1hdnr")
+}],
+"loop": true,
+"name": &"run",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1devl"]
+size = Vector2(448, 208)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x8inx"]
+radius = 97.04638
+
+[node name="Jaguar" type="Area2D"]
+scale = Vector2(0.255, 0.255)
+script = ExtResource("1_tyk5c")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_lxwe0")
+animation = &"run"
+autoplay = "run"
+frame_progress = 0.8857995
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 21)
+shape = SubResource("RectangleShape2D_1devl")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-124, -99)
+shape = SubResource("CircleShape2D_x8inx")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
