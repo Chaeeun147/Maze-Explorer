@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://cdbjqk1amj2tg"]
+[gd_scene load_steps=24 format=4 uid="uid://cdbjqk1amj2tg"]
 
 [ext_resource type="Texture2D" uid="uid://dtjoxgxt1qteo" path="res://assets/images/backround/sky 5.0.png" id="1_atrx7"]
 [ext_resource type="Texture2D" uid="uid://bjj0wh7ufrmxq" path="res://assets/images/tileset/grass with top and bottom boarder.png" id="1_qayhv"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b7r1gvuetoy42" path="res://scenes/jaguar.tscn" id="4_j1odm"]
 [ext_resource type="PackedScene" uid="uid://cys63djxt4inp" path="res://scenes/turtle.tscn" id="5_sxap8"]
 [ext_resource type="Texture2D" uid="uid://dgwaseoqxyxsg" path="res://assets/images/backround items/highbury frame 256 x 144.png" id="6_1seuy"]
+[ext_resource type="Texture2D" uid="uid://dksxhf3phsrsc" path="res://assets/images/backround items/level 2 entrance pink tree 128 x 128 x 16.png" id="7_2r1tl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ndhg3"]
 texture = ExtResource("1_qayhv")
@@ -17,6 +18,105 @@ texture_region_size = Vector2i(1000, 1000)
 tile_size = Vector2i(1000, 1000)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ndhg3")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8a7m2"]
+atlas = ExtResource("7_2r1tl")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_plydf"]
+atlas = ExtResource("7_2r1tl")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ntmo"]
+atlas = ExtResource("7_2r1tl")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nkeig"]
+atlas = ExtResource("7_2r1tl")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nfihu"]
+atlas = ExtResource("7_2r1tl")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lgguw"]
+atlas = ExtResource("7_2r1tl")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jprdt"]
+atlas = ExtResource("7_2r1tl")
+region = Rect2(256, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ps2vj"]
+atlas = ExtResource("7_2r1tl")
+region = Rect2(384, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbmf2"]
+atlas = ExtResource("7_2r1tl")
+region = Rect2(0, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xax6"]
+atlas = ExtResource("7_2r1tl")
+region = Rect2(128, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g7tkf"]
+atlas = ExtResource("7_2r1tl")
+region = Rect2(256, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4fww7"]
+atlas = ExtResource("7_2r1tl")
+region = Rect2(384, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gvm5i"]
+atlas = ExtResource("7_2r1tl")
+region = Rect2(0, 384, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jrfo0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8a7m2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_plydf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ntmo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nkeig")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nfihu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lgguw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jprdt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ps2vj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sbmf2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1xax6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7tkf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4fww7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gvm5i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.5
+}]
 
 [node name="LevelRoot" type="Node2D"]
 position = Vector2(1, 0)
@@ -38,6 +138,14 @@ tile_set = SubResource("TileSet_4d4qa")
 position = Vector2(2162, 200)
 scale = Vector2(2.114583, 2.114583)
 texture = ExtResource("6_1seuy")
+
+[node name="Pink Tree" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(3873, 676)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_jrfo0")
+autoplay = "default"
+frame_progress = 0.12416292
 
 [node name="Player" parent="." instance=ExtResource("3_3wcxf")]
 position = Vector2(82, 602)
