@@ -1,0 +1,109 @@
+[gd_scene load_steps=16 format=3 uid="uid://n8d4spvvst6k"]
+
+[ext_resource type="Texture2D" uid="uid://cdpf4a67uetuf" path="res://assets/images/backround items/pink castle asset.png" id="1_wpt8o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sniyc"]
+atlas = ExtResource("1_wpt8o")
+region = Rect2(0, 0, 990, 990)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7x435"]
+atlas = ExtResource("1_wpt8o")
+region = Rect2(990, 0, 990, 990)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2n8cu"]
+atlas = ExtResource("1_wpt8o")
+region = Rect2(1980, 0, 990, 990)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_begcd"]
+atlas = ExtResource("1_wpt8o")
+region = Rect2(0, 990, 990, 990)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_menu4"]
+atlas = ExtResource("1_wpt8o")
+region = Rect2(990, 990, 990, 990)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nb6vd"]
+atlas = ExtResource("1_wpt8o")
+region = Rect2(1980, 990, 990, 990)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g13hs"]
+atlas = ExtResource("1_wpt8o")
+region = Rect2(0, 1980, 990, 990)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3nevd"]
+atlas = ExtResource("1_wpt8o")
+region = Rect2(990, 1980, 990, 990)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_060pe"]
+atlas = ExtResource("1_wpt8o")
+region = Rect2(1980, 1980, 990, 990)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tl6ss"]
+atlas = ExtResource("1_wpt8o")
+region = Rect2(2970, 1980, 990, 990)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mmhrw"]
+atlas = ExtResource("1_wpt8o")
+region = Rect2(0, 2970, 990, 990)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_diqji"]
+atlas = ExtResource("1_wpt8o")
+region = Rect2(990, 2970, 990, 990)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0gwe"]
+atlas = ExtResource("1_wpt8o")
+region = Rect2(1980, 2970, 990, 990)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6s4is"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sniyc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7x435")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2n8cu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_begcd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_menu4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nb6vd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g13hs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3nevd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_060pe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tl6ss")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mmhrw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_diqji")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d0gwe")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="Pink Castle" type="AnimatedSprite2D"]
+texture_filter = 1
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_6s4is")
+autoplay = "default"
+frame_progress = 0.17481123

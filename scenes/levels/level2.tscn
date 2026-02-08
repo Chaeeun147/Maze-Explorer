@@ -1,0 +1,108 @@
+[gd_scene load_steps=12 format=4 uid="uid://cyoki6p2m8u8q"]
+
+[ext_resource type="Texture2D" uid="uid://dexnuetmk58lg" path="res://assets/images/backround/level 2 pink background.png" id="1_dj4wq"]
+[ext_resource type="Texture2D" uid="uid://bjj0wh7ufrmxq" path="res://assets/images/tileset/grass with top and bottom boarder.png" id="2_k0mew"]
+[ext_resource type="Texture2D" uid="uid://dgwaseoqxyxsg" path="res://assets/images/backround items/highbury frame 256 x 144.png" id="3_b0vvs"]
+[ext_resource type="PackedScene" uid="uid://dgtflyvf546jf" path="res://scenes/player.tscn" id="5_gycjm"]
+[ext_resource type="PackedScene" uid="uid://b7r1gvuetoy42" path="res://scenes/jaguar.tscn" id="6_8i1lk"]
+[ext_resource type="PackedScene" uid="uid://cys63djxt4inp" path="res://scenes/Turtle.tscn" id="7_hgky1"]
+[ext_resource type="Texture2D" uid="uid://c5d7cmfcl083f" path="res://assets/images/backround items/pink tree.png" id="8_b0vvs"]
+[ext_resource type="PackedScene" uid="uid://n8d4spvvst6k" path="res://scenes/pink_castle.tscn" id="8_k0mew"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ndhg3"]
+texture = ExtResource("2_k0mew")
+texture_region_size = Vector2i(1000, 1000)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-500, -500, 500, -500, 500, 500, -500, 500)
+
+[sub_resource type="TileSet" id="TileSet_4d4qa"]
+tile_size = Vector2i(1000, 1000)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_ndhg3")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2r1tl"]
+size = Vector2(64, 200)
+
+[node name="LevelRoot" type="Node2D"]
+position = Vector2(1, 0)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = -1905.0
+offset_top = -2361.0
+offset_right = 5193.0
+offset_bottom = 2540.0
+texture = ExtResource("1_dj4wq")
+stretch_mode = 1
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+scale = Vector2(0.06, 0.06)
+tile_map_data = PackedByteArray("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")
+tile_set = SubResource("TileSet_4d4qa")
+
+[node name="HighburyFrame256X144" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(704, -397)
+scale = Vector2(2.114583, 2.114583)
+texture = ExtResource("3_b0vvs")
+
+[node name="Pink Castle" parent="." instance=ExtResource("8_k0mew")]
+position = Vector2(2938.0002, -325.00003)
+scale = Vector2(0.65, 0.65)
+
+[node name="Player" parent="." instance=ExtResource("5_gycjm")]
+position = Vector2(1623, -143)
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Jaguar2" parent="Enemies" instance=ExtResource("6_8i1lk")]
+position = Vector2(1784.0001, -220.00003)
+scale = Vector2(0.25500003, 0.25500003)
+
+[node name="Jaguar3" parent="Enemies" instance=ExtResource("6_8i1lk")]
+position = Vector2(1366.0001, -90.00001)
+scale = Vector2(0.25500003, 0.25500003)
+
+[node name="Jaguar" parent="Enemies" instance=ExtResource("6_8i1lk")]
+position = Vector2(1244, -90.00001)
+scale = Vector2(0.25500003, 0.25500003)
+
+[node name="Turtles" type="Node2D" parent="."]
+
+[node name="Turtle" parent="Turtles" instance=ExtResource("7_hgky1")]
+position = Vector2(1007, -174)
+
+[node name="Turtle2" parent="Turtles" instance=ExtResource("7_hgky1")]
+position = Vector2(1397, -226)
+
+[node name="Turtle3" parent="Turtles" instance=ExtResource("7_hgky1")]
+position = Vector2(210, 41)
+
+[node name="Turtle4" parent="Turtles" instance=ExtResource("7_hgky1")]
+position = Vector2(1966, 605)
+
+[node name="Turtle5" parent="Turtles" instance=ExtResource("7_hgky1")]
+position = Vector2(1955, -215)
+
+[node name="Turtle6" parent="Turtles" instance=ExtResource("7_hgky1")]
+position = Vector2(3364, 736)
+
+[node name="Exit" type="Area2D" parent="."]
+position = Vector2(3851, 628)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
+position = Vector2(24, 53)
+shape = SubResource("RectangleShape2D_2r1tl")
+
+[node name="PinkTree" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(3232.0002, -132.00002)
+scale = Vector2(1.46875, 1.46875)
+texture = ExtResource("8_b0vvs")
+
+[node name="PinkTree2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(2591, -137.00002)
+scale = Vector2(1.46875, 1.46875)
+texture = ExtResource("8_b0vvs")

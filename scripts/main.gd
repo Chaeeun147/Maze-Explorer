@@ -1,6 +1,7 @@
 extends Node2D
 @onready var score_label: Label = $HUD/ScorePanel/ScoreLabel
 
+var level: int = 1
 var score: int = 0
 
 
@@ -14,6 +15,12 @@ func _process(_delta: float) -> void:
 	pass
 
 func _setup_level() -> void:
+	
+	#connect Exit
+	var exit = $LevelRoot.get_node_or_null("Exit")
+	if exit:
+		exit.body_entered.connect(_on_exit_body_entered)
+	
 	
 	#connect turtles
 	var turtles = $LevelRoot.get_node_or_null("Turtles")
@@ -31,6 +38,14 @@ func _setup_level() -> void:
 #--------------------------
 # SIGNAL HANDLERS
 #--------------------------
+func _on_exit_body_entered(body: Node2D) -> void:
+	if body.name == "Player":
+		level += 1
+		print(level)
+		body.can_move = false
+
+
+
 func _on_player_died(body):
 	body.die()
 	print("Player Killed")

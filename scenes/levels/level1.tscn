@@ -125,6 +125,7 @@ size = Vector2(64, 200)
 position = Vector2(1, 0)
 
 [node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
 offset_left = -1905.0
 offset_top = -860.0
 offset_right = 5193.0
@@ -138,6 +139,7 @@ tile_map_data = PackedByteArray("AAAAAAsAAAAAAAAAAAABAAsAAAAAAAAAAAACAAsAAAAAAAA
 tile_set = SubResource("TileSet_4d4qa")
 
 [node name="HighburyFrame256X144" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(2162, 200)
 scale = Vector2(2.114583, 2.114583)
 texture = ExtResource("6_1seuy")
