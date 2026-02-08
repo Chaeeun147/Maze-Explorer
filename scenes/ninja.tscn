@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://bsw5eymwpk06x"]
+
+[ext_resource type="Texture2D" uid="uid://cmssgdxoq5u8o" path="res://assets/images/backround items/ninja 704 x 704 x 4.png" id="1_got4c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4i837"]
+atlas = ExtResource("1_got4c")
+region = Rect2(704, 0, 704, 704)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kpdli"]
+atlas = ExtResource("1_got4c")
+region = Rect2(0, 704, 704, 704)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7j1o"]
+atlas = ExtResource("1_got4c")
+region = Rect2(704, 704, 704, 704)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5krh3"]
+atlas = ExtResource("1_got4c")
+region = Rect2(0, 0, 704, 704)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_he7mg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4i837")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpdli")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r7j1o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5krh3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Ninja" type="AnimatedSprite2D"]
+texture_filter = 1
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_he7mg")
+autoplay = "default"
+frame_progress = 0.7480322
