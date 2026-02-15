@@ -287,5 +287,5 @@ animation = &"dying"
 autoplay = "idle"
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(73.33333, -1359.9999)
+position = Vector2(86.66666, -1500)
 scale = Vector2(-220597220, 115279540000)

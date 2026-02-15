@@ -153,7 +153,7 @@ autoplay = "default"
 frame_progress = 0.12416292
 
 [node name="Player" parent="." instance=ExtResource("3_3wcxf")]
-position = Vector2(82, 602)
+position = Vector2(73, 641)
 
 [node name="Enemies" type="Node2D" parent="."]
 
