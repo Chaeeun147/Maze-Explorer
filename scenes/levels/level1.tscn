@@ -119,7 +119,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2r1tl"]
-size = Vector2(64, 200)
+size = Vector2(181, 200)
 
 [node name="LevelRoot" type="Node2D"]
 position = Vector2(1, 0)
@@ -194,5 +194,5 @@ position = Vector2(3851, 628)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
-position = Vector2(24, 53)
+position = Vector2(78.5, 53)
 shape = SubResource("RectangleShape2D_2r1tl")

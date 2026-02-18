@@ -48,7 +48,7 @@ physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_8w0pe")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2r1tl"]
-size = Vector2(105, 263)
+size = Vector2(242, 263)
 
 [node name="LevelRoot" type="Node2D"]
 position = Vector2(1, 0)
@@ -244,7 +244,7 @@ position = Vector2(6121, 196)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
-position = Vector2(29.5, 21.5)
+position = Vector2(100, 21.5)
 shape = SubResource("RectangleShape2D_2r1tl")
 
 [node name="Table" type="Sprite2D" parent="."]
